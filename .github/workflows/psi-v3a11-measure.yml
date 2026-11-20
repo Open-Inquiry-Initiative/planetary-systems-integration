@@ -1,0 +1,32 @@
+name: PSI-001 V3-A11 measurement evidence
+on:
+  push:
+    branches: [psi-001-v0.3.0-coordination-identification]
+  pull_request:
+    paths:
+      - 'research/psi001/v0.3.0/**'
+      - '.github/workflows/psi-v3a11-measure.yml'
+permissions:
+  contents: read
+jobs:
+  measure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Generate deterministic protocol evidence and local timing
+        run: |
+          mkdir -p evidence
+          python research/psi001/v0.3.0/development/v3a_instrumentation.py --iterations 10000 > evidence/v3a11-measurements.json
+          python research/psi001/v0.3.0/development/v3a_independent_audit.py > evidence/v3a11-independent-sweep.json
+          sha256sum evidence/*.json > evidence/SHA256SUMS
+          cat evidence/v3a11-measurements.json
+          cat evidence/SHA256SUMS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: psi-v3a11-evidence
+          path: evidence/
+          if-no-files-found: error
+          retention-days: 90
