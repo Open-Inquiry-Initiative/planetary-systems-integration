@@ -1,0 +1,147 @@
+{
+  "coordination_cost": 1,
+  "minimum_savings": 1,
+  "cases": {
+    "price_variation": {
+      "prices_per_mwh": [
+        2,
+        10
+      ],
+      "import_limits_mwh": [
+        3,
+        3
+      ],
+      "independent": {
+        "imports_mwh": [
+          3,
+          3
+        ],
+        "pump_power_mwh": [
+          1,
+          1
+        ],
+        "boiler_heat_mwh": [
+          0,
+          0
+        ],
+        "unserved_mwh": 0,
+        "dispatch_cost": 36,
+        "total_cost": 36
+      },
+      "coordinated": {
+        "imports_mwh": [
+          3,
+          2
+        ],
+        "pump_power_mwh": [
+          1,
+          0
+        ],
+        "boiler_heat_mwh": [
+          0,
+          2
+        ],
+        "unserved_mwh": 0,
+        "dispatch_cost": 34,
+        "total_cost": 35
+      },
+      "break_even_coordination_cost": 2,
+      "net_savings": 1,
+      "meets_savings_threshold": true
+    },
+    "no_dispatch_flexibility": {
+      "prices_per_mwh": [
+        2,
+        10
+      ],
+      "import_limits_mwh": [
+        2,
+        2
+      ],
+      "independent": {
+        "imports_mwh": [
+          2,
+          2
+        ],
+        "pump_power_mwh": [
+          0,
+          0
+        ],
+        "boiler_heat_mwh": [
+          2,
+          2
+        ],
+        "unserved_mwh": 0,
+        "dispatch_cost": 40,
+        "total_cost": 40
+      },
+      "coordinated": {
+        "imports_mwh": [
+          2,
+          2
+        ],
+        "pump_power_mwh": [
+          0,
+          0
+        ],
+        "boiler_heat_mwh": [
+          2,
+          2
+        ],
+        "unserved_mwh": 0,
+        "dispatch_cost": 40,
+        "total_cost": 41
+      },
+      "break_even_coordination_cost": 0,
+      "net_savings": -1,
+      "meets_savings_threshold": false
+    },
+    "low_price_hour_import_restriction": {
+      "prices_per_mwh": [
+        2,
+        10
+      ],
+      "import_limits_mwh": [
+        2,
+        3
+      ],
+      "independent": {
+        "imports_mwh": [
+          2,
+          3
+        ],
+        "pump_power_mwh": [
+          0,
+          1
+        ],
+        "boiler_heat_mwh": [
+          2,
+          0
+        ],
+        "unserved_mwh": 0,
+        "dispatch_cost": 42,
+        "total_cost": 42
+      },
+      "coordinated": {
+        "imports_mwh": [
+          2,
+          2
+        ],
+        "pump_power_mwh": [
+          0,
+          0
+        ],
+        "boiler_heat_mwh": [
+          2,
+          2
+        ],
+        "unserved_mwh": 0,
+        "dispatch_cost": 40,
+        "total_cost": 41
+      },
+      "break_even_coordination_cost": 2,
+      "net_savings": 1,
+      "meets_savings_threshold": true
+    }
+  }
+}
