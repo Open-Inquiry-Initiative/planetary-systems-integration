@@ -1,0 +1,31 @@
+name: PSI-001 V3-A14 common-observation evidence
+on:
+  push:
+    branches: [psi-001-v0.3.0-coordination-identification]
+  pull_request:
+    paths:
+      - 'research/psi001/v0.3.0/**'
+      - '.github/workflows/psi-v3a14-observation.yml'
+permissions:
+  contents: read
+jobs:
+  observe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Generate observation evidence and checksums
+        run: |
+          mkdir -p evidence
+          python research/psi001/v0.3.0/development/v3a_common_observation.py > evidence/v3a14-common-observation.json
+          sha256sum evidence/v3a14-common-observation.json > evidence/SHA256SUMS
+          cat evidence/v3a14-common-observation.json
+          cat evidence/SHA256SUMS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: psi-v3a14-common-observation
+          path: evidence/
+          if-no-files-found: error
+          retention-days: 90
