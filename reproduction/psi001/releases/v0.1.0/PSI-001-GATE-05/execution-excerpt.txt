@@ -1,0 +1,10 @@
+PSI-001 annual simulation execution excerpt
+Recorded 2026-11-19 22:14:19 UTC. Exit code 0.
+Verbatim scenario lines from the captured tool output.
+
+flat_tariff baseline savings=272994.92 threshold=471993.4 break-even=372994.92 favorable=False
+flat_tariff cold_snap savings=271750.53 threshold=472797.49 break-even=371750.53 favorable=False
+flat_tariff thermal_trunk_outage savings=268045.12 threshold=472234.61 break-even=368045.12 favorable=False
+hourly_tariff baseline savings=-100000 threshold=468263.45 break-even=0 favorable=False
+hourly_tariff cold_snap savings=-100000 threshold=469079.98 break-even=0 favorable=False
+hourly_tariff thermal_trunk_outage savings=-100000 threshold=468554.16 break-even=0 favorable=False

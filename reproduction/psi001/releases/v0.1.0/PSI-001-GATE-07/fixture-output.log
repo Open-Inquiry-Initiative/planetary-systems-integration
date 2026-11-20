@@ -1,0 +1,23 @@
+3.15.2 Windows-11-10.0.26200-SP0
+INTEGRITY: preserved source and both 4,959-byte JSON files match pinned hashes.
+Fixture tuples: (pump MWh, dispatch cost, unmet electricity MWh, unmet heat MWh)
+PASS import cap and COP: A=(5, 4137.5, 0, 0) B=(5, 4137.5, 0, 0) net=-100000
+PASS pump nameplate cap: A=(18, 1795, 0, 0) B=(18, 1795, 0, 0) net=-100000
+PASS boiler cap takes precedence over expensive electricity: A=(8, 6840, 0, 0) B=(8, 6840, 0, 0) net=-100000
+PASS no flexibility, different price signals: A=(0, 4700, 0, 0) B=(0, 4700, 0, 0) net=-100000
+PASS shared hourly prices with flexibility: A=(0, 2425, 0, 0) B=(0, 2425, 0, 0) net=-100000
+PASS different tariffs with flexibility: A=(10, 2600, 0, 0) B=(0, 2425, 0, 0) net=-99825
+PASS exact marginal cost tie: A=(0, 2250, 0, 0) B=(0, 2250, 0, 0) net=-100000
+PASS capacity shortfall: A=(0, 16850, 5, 30) B=(0, 16850, 5, 30) net=-100000
+PASS 48-hour outage boundary: A=(0, 73200, 0, 0) B=(0, 73200, 0, 0) net=-100000
+PASS hour 49 after outage: A=(10, 74000, 0, 0) B=(10, 74000, 0, 0) net=-100000
+PASS cold snap boundary: heat=1892 pump=756.8 dispatch=59472
+FAIL input-length validation: two electric and price intervals, one heat interval; one interval silently dropped and service_met=True.
+FAIL input-domain validation: negative base load yields dispatch cost -200 and service_met=True.
+PASS saved flat_tariff/baseline: net=272994.920768023 share=0.578387% unmet=0, 1% and 5% both fail
+PASS saved flat_tariff/cold_snap: net=271750.534337968 share=0.574772% unmet=0, 1% and 5% both fail
+PASS saved flat_tariff/thermal_trunk_outage: net=268045.120785087 share=0.567610% unmet=0, 1% and 5% both fail
+PASS saved hourly_tariff/baseline: net=-100000.000000000 share=-0.213555% unmet=0, 1% and 5% both fail
+PASS saved hourly_tariff/cold_snap: net=-100000.000000000 share=-0.213183% unmet=0, 1% and 5% both fail
+PASS saved hourly_tariff/thermal_trunk_outage: net=-100000.000000000 share=-0.213423% unmet=0, 1% and 5% both fail
+INTEGRITY: original, archived, and Gate-06 artifact hashes unchanged.

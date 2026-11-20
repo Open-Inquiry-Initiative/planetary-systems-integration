@@ -1,0 +1,144 @@
+{
+  "hours": 8760,
+  "coordination_overhead": 100000,
+  "minimum_net_savings_share": 0.01,
+  "units": "synthetic currency units and MWh",
+  "campaigns": {
+    "flat_tariff": {
+      "baseline": {
+        "heat_demand_mwh": 300000.0000000028,
+        "independent": {
+          "dispatch_cost": 47199339.74284088,
+          "unserved_heat_mwh": 0.0,
+          "unserved_electric_mwh": 0.0,
+          "pump_electric_mwh": 85347.06294553685,
+          "total_cost": 47199339.74284088
+        },
+        "coordinated": {
+          "dispatch_cost": 46826344.822072856,
+          "unserved_heat_mwh": 0.0,
+          "unserved_electric_mwh": 0.0,
+          "pump_electric_mwh": 67566.42483188341,
+          "total_cost": 46926344.822072856
+        },
+        "net_savings": 272994.92076802254,
+        "break_even_overhead": 372994.92076802254,
+        "minimum_net_savings": 471993.3974284088,
+        "service_met": true,
+        "favorable": false
+      },
+      "cold_snap": {
+        "heat_demand_mwh": 301786.864144172,
+        "independent": {
+          "dispatch_cost": 47279748.62932847,
+          "unserved_heat_mwh": 0.0,
+          "unserved_electric_mwh": 0.0,
+          "pump_electric_mwh": 85347.06294553685,
+          "total_cost": 47279748.62932847
+        },
+        "coordinated": {
+          "dispatch_cost": 46907998.0949905,
+          "unserved_heat_mwh": 0.0,
+          "unserved_electric_mwh": 0.0,
+          "pump_electric_mwh": 67611.6813283891,
+          "total_cost": 47007998.0949905
+        },
+        "net_savings": 271750.53433796763,
+        "break_even_overhead": 371750.53433796763,
+        "minimum_net_savings": 472797.4862932847,
+        "service_met": true,
+        "favorable": false
+      },
+      "thermal_trunk_outage": {
+        "heat_demand_mwh": 300000.0000000028,
+        "independent": {
+          "dispatch_cost": 47223460.70292278,
+          "unserved_heat_mwh": 0.0,
+          "unserved_electric_mwh": 0.0,
+          "pump_electric_mwh": 84483.06294553677,
+          "total_cost": 47223460.70292278
+        },
+        "coordinated": {
+          "dispatch_cost": 46855415.58213769,
+          "unserved_heat_mwh": 0.0,
+          "unserved_electric_mwh": 0.0,
+          "pump_electric_mwh": 66882.42483188372,
+          "total_cost": 46955415.58213769
+        },
+        "net_savings": 268045.12078508735,
+        "break_even_overhead": 368045.12078508735,
+        "minimum_net_savings": 472234.6070292278,
+        "service_met": true,
+        "favorable": false
+      }
+    },
+    "hourly_tariff": {
+      "baseline": {
+        "heat_demand_mwh": 300000.0000000028,
+        "independent": {
+          "dispatch_cost": 46826344.822072856,
+          "unserved_heat_mwh": 0.0,
+          "unserved_electric_mwh": 0.0,
+          "pump_electric_mwh": 67566.42483188341,
+          "total_cost": 46826344.822072856
+        },
+        "coordinated": {
+          "dispatch_cost": 46826344.822072856,
+          "unserved_heat_mwh": 0.0,
+          "unserved_electric_mwh": 0.0,
+          "pump_electric_mwh": 67566.42483188341,
+          "total_cost": 46926344.822072856
+        },
+        "net_savings": -100000.0,
+        "break_even_overhead": 0.0,
+        "minimum_net_savings": 468263.44822072855,
+        "service_met": true,
+        "favorable": false
+      },
+      "cold_snap": {
+        "heat_demand_mwh": 301786.864144172,
+        "independent": {
+          "dispatch_cost": 46907998.0949905,
+          "unserved_heat_mwh": 0.0,
+          "unserved_electric_mwh": 0.0,
+          "pump_electric_mwh": 67611.6813283891,
+          "total_cost": 46907998.0949905
+        },
+        "coordinated": {
+          "dispatch_cost": 46907998.0949905,
+          "unserved_heat_mwh": 0.0,
+          "unserved_electric_mwh": 0.0,
+          "pump_electric_mwh": 67611.6813283891,
+          "total_cost": 47007998.0949905
+        },
+        "net_savings": -100000.0,
+        "break_even_overhead": 0.0,
+        "minimum_net_savings": 469079.980949905,
+        "service_met": true,
+        "favorable": false
+      },
+      "thermal_trunk_outage": {
+        "heat_demand_mwh": 300000.0000000028,
+        "independent": {
+          "dispatch_cost": 46855415.58213769,
+          "unserved_heat_mwh": 0.0,
+          "unserved_electric_mwh": 0.0,
+          "pump_electric_mwh": 66882.42483188372,
+          "total_cost": 46855415.58213769
+        },
+        "coordinated": {
+          "dispatch_cost": 46855415.58213769,
+          "unserved_heat_mwh": 0.0,
+          "unserved_electric_mwh": 0.0,
+          "pump_electric_mwh": 66882.42483188372,
+          "total_cost": 46955415.58213769
+        },
+        "net_savings": -100000.0,
+        "break_even_overhead": 0.0,
+        "minimum_net_savings": 468554.1558213769,
+        "service_met": true,
+        "favorable": false
+      }
+    }
+  }
+}
